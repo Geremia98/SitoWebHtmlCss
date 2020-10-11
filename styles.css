@@ -1,0 +1,291 @@
+/* NOTE:
+specifica dei font utilizzati
+ */
+
+@font-face {
+  font-family: "Acherus";
+  src: url("fonts/acherus-light.otf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Acherus";
+  src: url("fonts/acherus-bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+
+/* NOTE:
+specifica caratteri generali
+specifica elementi html
+ */
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Acherus";
+  line-height: 1.8em;
+  font-weight: 300;
+  color: white;
+}
+
+.menu-container {
+  position: fixed;
+  background-color: #181716;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+
+  opacity: 0.93;
+  z-index: 100;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1.3em;
+}
+
+a :visited {
+  text-decoration: none;
+}
+
+a :active {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+
+
+/* NOTE:
+colore di sfondo della pagina
+altezza pagina
+disposizione flex della pagina
+immagini di background dei vari moduli
+ */
+
+.web-page {
+  background-color: #181716;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+
+  height: 800px;
+  background-repeat: no-repeat;
+
+  background-position: right center;
+  background-size: cover;
+}
+
+.home-page {
+  background-image: url("Images-mobile/homevertical.svg");
+}
+
+.page-photograph {
+  background-image: url("Images-mobile/photovertical2.svg");
+}
+
+.page-digital {
+  background-image: url("Images-mobile/digitale.svg");
+}
+
+.page-nature {
+  background-image: url("Images-mobile/nature.svg");
+}
+
+.contacts-page {
+  height: 500px;
+}
+
+
+
+/* NOTE:
+disposizione e gestione della parte scritta
+particolari dei vari moduli
+ */
+
+.write {
+  position: relative;
+  background-color: transparent;
+
+  width: 50%;
+  text-align: center;
+
+  top: 30%;
+}
+
+.title {
+  font-size: 2.2em;
+  font-weight: 700;
+
+  line-height: 1.2em;
+}
+
+.text {
+  font-size: 1.2em;
+  margin-top: 1.4em;
+}
+
+.home-page
+.write {
+  top: 40%;
+  left: 40px;
+}
+
+.page-photograph
+.write {
+  left: 60px;
+  width: 70%;
+}
+
+.page-digital
+.write {
+  left: 80px;
+}
+
+.page-nature
+.write {
+  left: 80px;
+}
+
+.contacts-page
+.write {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 60%;
+  height: 70%;
+
+  top: 0;
+  margin: 70px auto;
+
+}
+
+
+
+/* NOTE:
+gestione dimensioni loghi Contatti
+ */
+
+.logo-container {
+
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  margin: 4em;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  margin: 2em;
+}
+
+
+
+@media only screen and (min-width: 401px) and (max-width: 660px) {
+
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 661px) and (max-width: 960px) {
+
+  .home-page {
+    background-image: url("Images-tablet/home.svg");
+  }
+
+  .logo {
+    width: 100px;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+  .page-photograph
+  .write {
+    left: 60px;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+
+  .web-page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .home-page {
+    width: 100%;
+    background-image: url("Images-desktop/home.svg");
+  }
+
+  .page-photograph {
+    width: 47.3%;
+    margin: 1%;
+  }
+
+  .page-digital {
+    width: 47.3%;
+    margin: 1%;
+  }
+
+  .page-nature {
+    width: 100%;
+    margin: 1em;
+    background-image: url("Images-desktop/nature.svg");
+  }
+
+  .page-nature
+  .write {
+    width: 80%;
+    top: 110px;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .contacts-page {
+    width: 100%;
+  }
+
+  .contacts-page
+  .write {
+    width: 50%;
+  }
+
+  .logo {
+    width: 90px;
+    height: auto;
+    margin: 2em;
+  }
+}
